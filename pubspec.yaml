@@ -1,0 +1,40 @@
+name: forkify_app
+description: "A new Flutter project."
+
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.4 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  json_serializable: ^6.8.0     #https://pub.dev/packages/json_serializable
+  shared_preferences: ^2.3.2    #https://pub.dev/packages/shared_preferences
+  animated_card: ^2.0.0         #https://pub.dev/packages/animated_card
+  flutter_mobx: ^2.2.1+1        #https://pub.dev/packages/flutter_mobx
+  google_fonts: ^6.2.1          #https://pub.dev/packages/google_fonts
+  url_launcher: ^6.3.0          #https://pub.dev/packages/url_launcher
+  provider: ^6.1.2              #https://pub.dev/packages/provider
+  shimmer: ^3.0.0               #https://pub.dev/packages/shimmer
+  lottie: ^3.1.2                #https://pub.dev/packages/lottie
+  mobx: ^2.3.3+2                #https://pub.dev/packages/mobx
+  dio: ^5.6.0                   #https://pub.dev/packages/dio
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0         
+  mobx_codegen: ^2.6.1          #https://pub.dev/packages/mobx_codegen
+  build_runner: ^2.4.11         #https://pub.dev/packages/build_runner
+
+flutter:
+
+  uses-material-design: true
+  assets:
+    - assets/lotties/
+  
+
+scripts: scripts.yaml
