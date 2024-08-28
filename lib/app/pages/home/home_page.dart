@@ -104,9 +104,20 @@ class _HomePageState extends State<HomePage> {
                       Lottie.asset("assets/lotties/error.json", repeat: false),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 32),
-                        child: Text(
-                          controller.error!,
-                          textAlign: TextAlign.center,
+                        child: Column(
+                          children: [
+                            Text(
+                              "Ops, tivemos um erro!",
+                              textAlign: TextAlign.center,
+                              style: AppTextStyles.title
+                                  .copyWith(color: Colors.red),
+                            ),
+                            Text(
+                              controller.error!,
+                              textAlign: TextAlign.center,
+                              style: AppTextStyles.subtile,
+                            ),
+                          ],
                         ),
                       ),
                     ],

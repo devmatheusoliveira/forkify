@@ -5,7 +5,9 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:forkify_app/app/pages/home/home_controller.dart';
 import 'package:forkify_app/app/shared/controllers/favorites_controller.dart';
 import 'package:forkify_app/app/shared/models/recipe_tile/recipe_tile_model.dart';
+import 'package:forkify_app/app/shared/themes/app_text_styles.dart';
 import 'package:forkify_app/app/shared/widgets/recipe_list_tile/recipe_list_tile_widget.dart';
+import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 
 class FavoritesPage extends StatefulWidget {
@@ -30,7 +32,19 @@ class _FavoritesPageState extends State<FavoritesPage> {
         builder: (context) {
           final favoritos = favoritesController.recipeTiles;
           if (favoritos.isEmpty) {
-            return const Center(child: Text("Você ainda não tem favoritos!"));
+            return Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Lottie.asset("assets/lotties/favoritos.json"),
+                  Text(
+                    "Você ainda não tem favoritos!",
+                    style: AppTextStyles.subtile,
+                  ),
+                ],
+              ),
+            );
           }
 
           return ListView.builder(

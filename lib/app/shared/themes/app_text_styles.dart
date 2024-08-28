@@ -29,6 +29,6 @@ class AppTextStyles {
     fontSize: 14,
     color: AppColors.grey,
   );
-  static final TextStyle contador =
-      GoogleFonts.urbanist(fontSize: 50, color: AppColors.primary);
+  static final TextStyle text =
+      GoogleFonts.urbanist(fontSize: 14, color: AppColors.black);
 }
